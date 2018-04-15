@@ -1,0 +1,16 @@
+Name,Description,ParentState,IsAbstract,DisplayName,IsCollection,EntityName
+APP_ROOT,A root state all other states derive from,,TRUE,Root,,
+Home,Home page for the app,APP_ROOT,FALSE,Home,,
+Interviewers,Top Level Collection: Interviewers,APP_ROOT,FALSE,Interviewers,TRUE,Interviewer
+Interviewer, ITEM: Interviewer,Interviewers,FALSE,Interviewer,FALSE,Interviewer
+Applicants,  - : Applicants,Interviewer,FALSE,Applicants,TRUE,Applicant
+Applicant, ITEM: Applicant,Applicants,FALSE,Applicant,FALSE,Applicant
+Positions,Top Level Collection: Positions,APP_ROOT,FALSE,Positions,TRUE,Position
+Position, ITEM: Position,Positions,FALSE,Position,FALSE,Position
+PositionApplicants,  - : Applicants,Position,FALSE,Applicants,TRUE,Applicant
+PositionApplicant, ITEM: Applicant,PositionApplicants,FALSE,Applicant,FALSE,Applicant
+About,A page about the app,APP_ROOT,FALSE,About,,
+Contact,A contact page for the company,APP_ROOT,FALSE,Contact,,
+Chat,Chat with a live representative,Contact,FALSE,Chat,,
+Email,Send an email to a representative,Contact,FALSE,Email,,
+Call,Get a phone number for your country and or state.,Contact,FALSE,Call,,

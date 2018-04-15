@@ -1,0 +1,35 @@
+
+Entities for AirtableApplicantTracking:
+
+ - Applicant 
+ - Interviewer 
+ - Position 
+
+ System Entities  (NOT included in ODXML):
+
+
+ IDS:
+
+-recWotPhG7VreWdWW/Entities
+
+-recmV1TD1tcwKKpzr/Entities
+
+-recw4iZdBiVtRIJoQ/Entities
+
+-rec74Fa5aYDeGsDOR/Applicants
+
+-rec9yA61jdUavkP63/Applicants
+
+-recO2MUWJvM6xIauT/Applicants
+
+-recDj5pGdmAascx0j/Interviewers
+
+-recEn6wJamtbp6yYx/Interviewers
+
+-recud3pL3oEhpjxZq/Interviewers
+
+-recfFXa7EMG8lXLJy/Positions
+
+-recxhwI5DfeDIDA2w/Positions
+
+

@@ -1,0 +1,47 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                Interviewers
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     Interviewers
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!interviewers || interviewers.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No Interviewers yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="interviewers && interviewers.length > 0">
+                        <button ion-item="" (click)="goToState(InterviewerState, interviewer)" *ngFor="let interviewer of interviewers">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ interviewer.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewInterviewer()">
+                        <ion-icon name="add" item-left=""></ion-icon> New Interviewer
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

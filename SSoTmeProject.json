@@ -6,13 +6,13 @@
   "CurrentPath": "",
   "SaveDisabled": false,
   "SSoTmeProjectId": "109a3ca6-4391-4d84-9edc-68585ce5b4eb",
-  "Name": "HomeworkPlus",
-  "RootPath": "C:\\Seeds\\ssotme-ms-airtable-ionic-sassymq-seed",
+  "Name": "AirtableApplicantTracking",
+  "RootPath": "C:\\Demo\\AirtableApplicantTracking",
   "ProjectSettings": [
     {
-      "ProjectSettingId": "be523bc0-0f67-4c32-9107-76eff038c44a",
+      "ProjectSettingId": "414279a4-41f4-427e-bfcc-0113a1cc66c5",
       "Name": "project-name",
-      "Value": "HomeworkPlus"
+      "Value": "AirtableApplicantTracking"
     }
   ],
   "ProjectTranspilers": [
@@ -53,7 +53,7 @@
       "ProjectTranspilerId": "8d26e7b0-88ac-4839-8233-7f4605681a65",
       "Name": "AirtableToXml",
       "RelativePath": "/SSoT",
-      "CommandLine": "airtable/airtable-to-xml -p baseId=BASE_ID_HERE -p apiKey=API_KEY_HERE"
+      "CommandLine": "airtable/airtable-to-xml -p baseId=appEbWuIaAy5h7pYm -p apiKey=keyAsKv7g3bNC484u"
     },
     {
       "MatchedTranspiler": {

@@ -1,0 +1,49 @@
+<html><head><title>AirtableApplicantTracking - Single Page Doc s</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" /></head><body><h3>AirtableApplicantTracking Raw Data model</h3><a class="btn btn-sm btn-primary" href="Index.html"><<&nbsp;Back Interactive Object Explorer</a><table style="width: 100%"><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Applicant"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#Interviewer">Interviewer</a>
+                        
+                        
+                            
+                                , <a href="#Interviewer">Interviewer</a>
+                        
+                        
+                            
+                                , <a href="#Position">Position</a>
+                        
+                        
+                        </div><h2>Applicant</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>ApplicantId</td><td>TEXT</td><td></td></tr><tr><td>OnsiteInterviewer</td><td>TEXT</td><td></td></tr><tr><td>OnsiteInterviewScore</td><td>TEXT</td><td></td></tr><tr><td>PhoneScreenInterviewer</td><td>TEXT</td><td></td></tr><tr><td>PhoneScreenNotes</td><td>TEXT</td><td></td></tr><tr><td>Applyingfor</td><td>TEXT</td><td></td></tr><tr><td>EmailAddress</td><td>TEXT</td><td></td></tr><tr><td>PhoneScreenScore</td><td>TEXT</td><td></td></tr><tr><td>OnsiteInterviewDate</td><td>xs:date</td><td></td></tr><tr><td>Stage</td><td>TEXT</td><td></td></tr><tr><td>OnsiteInterviewNotes</td><td>TEXT</td><td></td></tr><tr><td>Phone</td><td>TEXT</td><td></td></tr><tr><td>PhoneScreenDate</td><td>xs:date</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Interviewer"></a>
+                        <hr /><h2>Interviewer</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each Interviewer may have zero or more associated
+                          
+                            
+                                <a href="#Applicant">
+                                
+                                    Applicants
+                                    
+                                </a>
+                        
+                            
+                                , <a href="#Applicant">
+                                
+                                    Applicants
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>InterviewerId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Position"></a>
+                        <hr /><h2>Position</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each Position may have zero or more associated
+                          
+                            
+                                <a href="#Applicant">
+                                
+                                    Applicants
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>PositionId</td><td>TEXT</td><td></td></tr><tr><td>RequiredExperience</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Description</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr></table></body></html>

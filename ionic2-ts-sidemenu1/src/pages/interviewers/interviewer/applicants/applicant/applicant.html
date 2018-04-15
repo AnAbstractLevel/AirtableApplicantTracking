@@ -1,0 +1,249 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ applicant.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - Applicant</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header *ngIf="!editMode">
+                    
+                        <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input [readonly]="true" type="text" name="applicantName" [(ngModel)]="applicant.Name"></ion-input>
+                                
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>OnsiteInterviewScore</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="OnsiteInterviewScore" 
+                                                name="applicantOnsiteInterviewScoreName" 
+                                                [(ngModel)]="applicant.OnsiteInterviewScore"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>PhoneScreenNotes</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="PhoneScreenNotes" 
+                                                name="applicantPhoneScreenNotesName" 
+                                                [(ngModel)]="applicant.PhoneScreenNotes"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>EmailAddress</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="EmailAddress" 
+                                                name="applicantEmailAddressName" 
+                                                [(ngModel)]="applicant.EmailAddress"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>PhoneScreenScore</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="PhoneScreenScore" 
+                                                name="applicantPhoneScreenScoreName" 
+                                                [(ngModel)]="applicant.PhoneScreenScore"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>OnsiteInterviewDate</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="OnsiteInterviewDate" 
+                                                name="applicantOnsiteInterviewDateName" 
+                                                [(ngModel)]="applicant.OnsiteInterviewDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Stage</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Stage" 
+                                                name="applicantStageName" 
+                                                [(ngModel)]="applicant.Stage"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>OnsiteInterviewNotes</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="OnsiteInterviewNotes" 
+                                                name="applicantOnsiteInterviewNotesName" 
+                                                [(ngModel)]="applicant.OnsiteInterviewNotes"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Phone</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Phone" 
+                                                name="applicantPhoneName" 
+                                                [(ngModel)]="applicant.Phone"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>PhoneScreenDate</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="PhoneScreenDate" 
+                                                name="applicantPhoneScreenDateName" 
+                                                [(ngModel)]="applicant.PhoneScreenDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="applicantcreatedTimeName" 
+                                                [(ngModel)]="applicant.createdTime"></ion-input>
+                            </ion-item>
+                            
+
+                             <ion-row right="">
+                                <ion-col text-right="">   
+                                    <button ion-button="" (click)="editMode = true"><ion-icon name="create"></ion-icon> Edit</button>
+                                </ion-col> 
+                            </ion-row>
+                                            
+                </ion-card-header>
+                    
+                        <div *ngIf="editMode">
+                            <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input type="text" name="applicantName" [(ngModel)]="applicant.Name"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>OnsiteInterviewScore</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="OnsiteInterviewScore" 
+                                                name="applicantOnsiteInterviewScoreName" 
+                                                [(ngModel)]="applicant.OnsiteInterviewScore"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>PhoneScreenNotes</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="PhoneScreenNotes" 
+                                                name="applicantPhoneScreenNotesName" 
+                                                [(ngModel)]="applicant.PhoneScreenNotes"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>EmailAddress</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="EmailAddress" 
+                                                name="applicantEmailAddressName" 
+                                                [(ngModel)]="applicant.EmailAddress"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>PhoneScreenScore</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="PhoneScreenScore" 
+                                                name="applicantPhoneScreenScoreName" 
+                                                [(ngModel)]="applicant.PhoneScreenScore"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>OnsiteInterviewDate</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="OnsiteInterviewDate" 
+                                                name="applicantOnsiteInterviewDateName" 
+                                                [(ngModel)]="applicant.OnsiteInterviewDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Stage</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Stage" 
+                                                name="applicantStageName" 
+                                                [(ngModel)]="applicant.Stage"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>OnsiteInterviewNotes</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="OnsiteInterviewNotes" 
+                                                name="applicantOnsiteInterviewNotesName" 
+                                                [(ngModel)]="applicant.OnsiteInterviewNotes"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Phone</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Phone" 
+                                                name="applicantPhoneName" 
+                                                [(ngModel)]="applicant.Phone"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>PhoneScreenDate</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="PhoneScreenDate" 
+                                                name="applicantPhoneScreenDateName" 
+                                                [(ngModel)]="applicant.PhoneScreenDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="applicantcreatedTimeName" 
+                                                [(ngModel)]="applicant.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" (click)="updateApplicant(applicant)">
+                                        <ion-icon name="checkmark" item-left=""></ion-icon> Ok
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteApplicant()">
+                                        <ion-icon name="trash" item-left=""></ion-icon> Delete
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    
+
+                <p>
+                
+                More about {{ applicant.Name }} can go here...
+                
+
+                
+                </p>
+
+                
+
+            
+    </ion-card>
+
+</ion-content>

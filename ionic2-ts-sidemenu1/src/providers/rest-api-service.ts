@@ -24,104 +24,44 @@ export class RestAPIService {
       
       
       
-    public letterGrades: any[];
-    getLetterGrades() {
+    public applicants: any[];
+    getApplicants() {
 
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/LetterGrades?expand=all')
+            this.http.get(this.apiUrl + '/Applicants?expand=all')
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.letterGrades = data;
-                    resolve(this.letterGrades);
+                    this.applicants = data;
+                    resolve(this.applicants);
                 });
         });
     }
 
-    public letterGrade: any[];
-    getLetterGrade(letterGrade: any) {
+    public applicant: any[];
+    getApplicant(applicant: any) {
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/LetterGrades?expand=all&letterGradeId=' + letterGrade.LetterGradeId)
+            this.http.get(this.apiUrl + '/Applicants?expand=all&applicantId=' + applicant.ApplicantId)
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.letterGrade = data;
-                    resolve(this.letterGrade);
+                    this.applicant = data;
+                    resolve(this.applicant);
                 });
         });
     }
 
     
-    updateLetterGrade(letterGrade: any) {
+    updateApplicant(applicant: any) {
          return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/LetterGrades', letterGrade)
+            this.http.put(this.apiUrl + '/Applicants', applicant)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
                 });
         });
     }
-    addNewLetterGrade(letterGrade: any) {
+    addNewApplicant(applicant: any) {
          return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/LetterGrades', letterGrade)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-
-    deleteLetterGrade(letterGrade: any) {
-         return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/LetterGrades?letterGradeId=' + letterGrade.LetterGradeId)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-    
-      
-      
-      
-      
-      
-    public assignments: any[];
-    getAssignments() {
-
-        return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Assignments?expand=all')
-                .map(res => res.json())
-                .subscribe(data => {
-                    this.assignments = data;
-                    resolve(this.assignments);
-                });
-        });
-    }
-
-    public assignment: any[];
-    getAssignment(assignment: any) {
-        return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Assignments?expand=all&assignmentId=' + assignment.AssignmentId)
-                .map(res => res.json())
-                .subscribe(data => {
-                    this.assignment = data;
-                    resolve(this.assignment);
-                });
-        });
-    }
-
-    
-    updateAssignment(assignment: any) {
-         return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/Assignments', assignment)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-    addNewAssignment(assignment: any) {
-         return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/Assignments', assignment)
+            this.http.post(this.apiUrl + '/Applicants', applicant)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -129,9 +69,9 @@ export class RestAPIService {
         });
     }
 
-    deleteAssignment(assignment: any) {
+    deleteApplicant(applicant: any) {
          return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/Assignments?assignmentId=' + assignment.AssignmentId)
+            this.http.delete(this.apiUrl + '/Applicants?applicantId=' + applicant.ApplicantId)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -144,44 +84,44 @@ export class RestAPIService {
       
       
       
-    public courses: any[];
-    getCourses() {
+    public interviewers: any[];
+    getInterviewers() {
 
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Courses?expand=all')
+            this.http.get(this.apiUrl + '/Interviewers?expand=all')
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.courses = data;
-                    resolve(this.courses);
+                    this.interviewers = data;
+                    resolve(this.interviewers);
                 });
         });
     }
 
-    public course: any[];
-    getCourse(course: any) {
+    public interviewer: any[];
+    getInterviewer(interviewer: any) {
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Courses?expand=all&courseId=' + course.CourseId)
+            this.http.get(this.apiUrl + '/Interviewers?expand=all&interviewerId=' + interviewer.InterviewerId)
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.course = data;
-                    resolve(this.course);
+                    this.interviewer = data;
+                    resolve(this.interviewer);
                 });
         });
     }
 
     
-    updateCourse(course: any) {
+    updateInterviewer(interviewer: any) {
          return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/Courses', course)
+            this.http.put(this.apiUrl + '/Interviewers', interviewer)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
                 });
         });
     }
-    addNewCourse(course: any) {
+    addNewInterviewer(interviewer: any) {
          return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/Courses', course)
+            this.http.post(this.apiUrl + '/Interviewers', interviewer)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -189,9 +129,69 @@ export class RestAPIService {
         });
     }
 
-    deleteCourse(course: any) {
+    deleteInterviewer(interviewer: any) {
          return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/Courses?courseId=' + course.CourseId)
+            this.http.delete(this.apiUrl + '/Interviewers?interviewerId=' + interviewer.InterviewerId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public positions: any[];
+    getPositions() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Positions?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.positions = data;
+                    resolve(this.positions);
+                });
+        });
+    }
+
+    public position: any[];
+    getPosition(position: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Positions?expand=all&positionId=' + position.PositionId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.position = data;
+                    resolve(this.position);
+                });
+        });
+    }
+
+    
+    updatePosition(position: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/Positions', position)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewPosition(position: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/Positions', position)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deletePosition(position: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/Positions?positionId=' + position.PositionId)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);

@@ -1,0 +1,50 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ this.parent.interviewer.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - Applicants</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     Applicants
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!applicants || applicants.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No Applicants yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="applicants && applicants.length > 0">
+                        <button ion-item="" (click)="goToState(ApplicantState, applicant)" *ngFor="let applicant of applicants">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ applicant.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewApplicant()">
+                        <ion-icon name="add" item-left=""></ion-icon> New Applicant
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

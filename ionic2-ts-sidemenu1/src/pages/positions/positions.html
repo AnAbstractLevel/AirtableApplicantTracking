@@ -1,0 +1,47 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                Positions
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     Positions
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!positions || positions.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No Positions yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="positions && positions.length > 0">
+                        <button ion-item="" (click)="goToState(PositionState, position)" *ngFor="let position of positions">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ position.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewPosition()">
+                        <ion-icon name="add" item-left=""></ion-icon> New Position
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>
